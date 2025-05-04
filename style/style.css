@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #fcf5e9;
+  --dark-color: #333;
+  --container-normal: 1100px;
+  --container-wide: 1400px;
+  --container-narrow: 900px;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Container with Ulility classes */
+.container {
+  max-width: var(--container-normal);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-lg {
+  max-width: var(--container-wide);
+}
+
+.container-sm {
+  max-width: var(--container-narrow);
+}
+
+.section-heading {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.bg-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+.bg-dark .bg-primary {
+  padding: 0 0.3rem;
+}
+
+.btn {
+  background: transparent;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 1px solid #333;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: Pointer;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Navbar */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+
+.header-flex .logo {
+  max-width: 130px;
+}
+
+.header-flex .main-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-flex .main-menu a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.header-flex .main-menu a:hover {
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.current {
+  background-color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Ulility for the hero */
+.hero {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-primary {
+  /* padding: 5px; */
+  background-color: var(--primary-color);
+  color: #333;
+  /* opacity: 0.8; */
+}
+
+.hero .container h2 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-item {
+  /* margin: 10px; */
+  max-width: calc(calc(100% / 3) - 20px);
+  border-radius: 10px;
+  /* flex-wrap: wrap; */
+}
+.gallery-item:hover {
+  opacity: 0.9;
+}
+
+.gallery-item img {
+  border-radius: 10px;
+}
+/* Footer */
+.footer {
+  border-top: 1px solid #aaa;
+  margin-top: 2rem;
+  padding: 2rem 1.5rem;
+}
+
+.footer img {
+  max-width: 130px;
+}
+
+.footer .footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  margin: 0.2rem;
+}
+/* Services */
+.services {
+  background-color: #333;
+  color: #fff;
+  padding: 3rem 0 4rem;
+}
+
+.service-flex {
+  display: flex;
+  gap: 2rem;
+}
+.service-items h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Team */
+.team {
+  padding: 3rem 0 4rem;
+}
+.team-flex {
+  display: flex;
+  gap: 1.4rem;
+}
+.team-flex img {
+  border-radius: 10px;
+}
+
+/* For the Contact */
+
+.contact {
+  padding: 3rem 0 4rem;
+}
+.contact p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* .contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.form-group {
+  margin: 2rem 0;
+}
+
+.contact input,
+textarea {
+  border: none;
+  border-bottom: 1px #333 solid;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1rem;
+  /* text-align: center; */
+}
+.contact textarea {
+  height: 200px;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: 0;
+}
+
+.contact button {
+  width: 100%;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .hero {
+    height: 300px;
+  }
+  .hero .container h2 {
+    font-size: 1.6rem;
+  }
+
+  .gallery-item {
+    max-width: calc(50% - 20px);
+  }
+  .footer .footer-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .service-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .team-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
